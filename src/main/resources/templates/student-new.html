@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+    <head>
+        <title>Student management System</title>
+    </head>
+    <body>
+       
+                    <form th:action ="@{/studentsave}" th:object = "${student}"  method = "post">
+                        <div class="form-group">
+                            <label>Student first name</label>
+                            <input 
+                            type="text"
+                            name="firstName"
+                            th:field="*{fname}"
+                            placeholder="Enter first student name"
+                            class = "form-control"
+                            >
+                        </div>
+                        <div class= "form-group">
+                            <label>Student last name</label>
+                            <input 
+                            type="text"
+                            name="lastName"
+                            th:field="*{lname}"
+                            placeholder="Enter last student name"
+                            class = "form-control"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label>Student email</label>
+                            <input 
+                            type="text"
+                            name="email"
+                            th:field="*{email}"
+                            placeholder="Enter email"
+                            class = "form-control"
+                            />
+                        </div>
+                        <div class="footer-body">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                
+    </body>
+</html>
